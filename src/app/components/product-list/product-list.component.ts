@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
-
 import { Product } from '../../interfaces/Product'
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-product-list',
@@ -36,5 +38,6 @@ export class ProductListComponent implements OnInit {
         err => console.log(err)
       )
   }
-
+  faTrash = faTrash;
+  faPen=faPen;
 }
