@@ -1,0 +1,35 @@
+
+<div class="row">
+  <div class="col-sm-4 offset-sm-4">
+    <div class="card card-body">
+
+      <form (submit)="edit ? updateProduct() : submitProduct()">
+
+        <div class="form-group">
+          <input type="text" name="name" [(ngModel)]="product.name" class="form-control" placeholder="Nombre" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="text" name="name" [(ngModel)]="product.apellido" class="form-control" placeholder="Apellido" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="text" name="asegura" [(ngModel)]="product.asegura" class="form-control" placeholder="ARS">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Cedula" [(ngModel)]="product.cedula" class="form-control" placeholder="Cedula">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Poliza" [(ngModel)]="product.poliza" class="form-control" placeholder="Poliza">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Autoriza" [(ngModel)]="product.autoriza" class="form-control" placeholder="Autorizacion">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Amount" [(ngModel)]="product.amount" class="form-control" placeholder="Monto">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

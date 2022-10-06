@@ -1,0 +1,24 @@
+<div *ngFor="let product of products" class="table">
+  <div class="col-md-4">
+    <div class="col-md-35">
+      <ul>
+        <th>Nombre {{ product.name }}</th>
+        <th>Apellido {{ product.apellido }}</th>
+        <th>ARS {{ product.asegura }}</th>
+        <th>Cedula {{ product.cedula }}</th>
+        <th>Poliza {{ product.poliza }}</th>
+        <th>Autorizacion {{ product.autoriza}}</th>
+        <th>Monto {{ product.amount }}</th>
+        <th>Fecha: {{ product.createdAt }}</th>
+      </ul>
+      <button (click)="deleteProduct(product._id)" class="btn btn-danger">
+        Delete
+      </button>
+      <button [routerLink]="['/product/edit', product._id]" class="btn btn-secondary">
+        Edit
+      </button>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>

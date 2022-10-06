@@ -1,0 +1,7 @@
+name: '',
+asegura: '',
+    cedula: '',
+    poliza: '',
+    autoriza: '',
+	fechAut:'',
+    amount:0
