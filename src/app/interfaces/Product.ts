@@ -1,6 +1,7 @@
 export interface Product {
     _id?: string;
     name: string,
+    apellido:string,
     asegura: string,
     cedula: string,
     poliza: string,

@@ -1,4 +1,3 @@
-
 <div class="row">
   <div class="col-sm-4 offset-sm-4">
     <div class="card card-body">
@@ -9,10 +8,10 @@
           <input type="text" name="name" [(ngModel)]="product.name" class="form-control" placeholder="Nombre" autofocus>
         </div>
         <div class="form-group">
-          <input type="text" name="name" [(ngModel)]="product.apellido" class="form-control" placeholder="Apellido" autofocus>
+          <input type="text" name="apellido" [(ngModel)]="product.apellido" class="form-control" placeholder="Apellido" >
         </div>
         <div class="form-group">
-          <input type="text" name="asegura" [(ngModel)]="product.asegura" class="form-control" placeholder="ARS">
+          <input type="text" name="asegura" [(ngModel)]="product.asegura" class="form-control" placeholder="Aseguradora">
         </div>
         <div class="form-group">
           <input type="text" name="Cedula" [(ngModel)]="product.cedula" class="form-control" placeholder="Cedula">
@@ -27,7 +26,7 @@
           <input type="text" name="Amount" [(ngModel)]="product.amount" class="form-control" placeholder="Monto">
         </div>
         <button type="submit" class="btn btn-primary btn-block">
-          Save
+        Guardar
         </button>
       </form>
     </div>

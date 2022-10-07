@@ -29,6 +29,7 @@ export class ProductListComponent implements OnInit {
   }
 
   deleteProduct(id: string): void {
+    if(confirm('Seguro que Desea Eliminar'))
     this.productService.deleteProduct(id)
       .subscribe(
         res => {

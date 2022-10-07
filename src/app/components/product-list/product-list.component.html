@@ -40,7 +40,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let product of products.products">
-      <th scope="row">{{ product.name }}</th>
+      <th >{{ product.name }}</th>
       <td>{{ product.apellido }}</td>
       <td>{{ product.asegura }}</td>
       <td>{{ product.cedula }}</td>
@@ -48,7 +48,7 @@
       <td>{{ product.autoriza}}</td>
       <td>{{ product.amount }}</td>
       <td>{{ product.createdAt }}</td>
-      <td><fa-icon [routerLink]="['/product/edit', product._id]" [icon]="faPen"></fa-icon></td>
+      <td><fa-icon [routerLink]="['/product/edit',product._id]" [icon]="faPen"></fa-icon></td>
       <td><fa-icon (click)="deleteProduct(product._id)" [icon]="faTrash"></fa-icon></td>
      </tr>
     <tr>
