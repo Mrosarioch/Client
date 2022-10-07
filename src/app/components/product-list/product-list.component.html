@@ -1,36 +1,9 @@
-<!-- <div *ngFor="let product of products.products" class="table">
-  <div class="col-md-4">
-    <div class="col-md-35">
-      <ul>
-        <th>Nombre {{ product.name }}</th>
-        <th>Apellido {{ product.apellido }}</th>
-        <th>ARS {{ product.asegura }}</th>
-        <th>Cedula {{ product.cedula }}</th>
-        <th>Poliza {{ product.poliza }}</th>
-        <th>Autorizacion {{ product.autoriza}}</th>
-        <th>Monto {{ product.amount }}</th>
-        <th>Fecha: {{ product.createdAt }}</th>
-      </ul>
-      <button (click)="deleteProduct(product._id)" class="btn btn-danger">
-        Delete
-      </button>
-      <button [routerLink]="['/product/edit', product._id]" class="btn btn-secondary">
-        Edit
-      </button>
-    </div>
-    
-  </div>
-</div> -->
 
-<!-- table Start -->
 <style>
-  .table.table-hover{
-  box-shadow: 10px 10px 8px rgb(85, 113, 122);
-}
-tbody>tr>th{
-  font-weight: normal;
-}
-
+  .table.table-hover {
+    box-shadow: 10px 10px 8px rgb(85, 113, 122);
+  }
+ 
 </style>
 <table class="table table-hover">
   <thead>
@@ -48,37 +21,39 @@ tbody>tr>th{
   </thead>
   <tbody>
     <tr *ngFor="let product of products.products">
-      <th>{{ product.name }}</th>
+      <td>{{ product.name }}</td>
       <td>{{ product.apellido }}</td>
       <td>{{ product.cedula }}</td>
       <td>{{ product.asegura }}</td>
       <td>{{ product.poliza }}</td>
       <td>{{ product.autoriza }}</td>
       <td>{{ product.descripcion }}</td>
-      <td>{{ product.amount | currency: 'RD$'}}</td>
-      <td>{{ product.createdAt | date:' d MMM , y, h:mm:ss a' }}</td>
+      <td>{{ product.amount | currency: "RD$" }}</td>
+      <td>{{ product.createdAt | date: " d MMM , y, h:mm:ss a" }}</td>
       <td>
         <fa-icon
+        style="cursor: pointer; color: orange"
           [routerLink]="['/product/edit', product._id]"
           [icon]="faPen"
         ></fa-icon>
       </td>
       <td>
         <fa-icon
+          style="cursor: pointer; color: red"
           (click)="deleteProduct(product._id)"
           [icon]="faTrash"
         ></fa-icon>
       </td>
     </tr>
     <tr>
-      <td>Cantidad:{{ products.cantidad }}</td>
+      <td>Cantidad: {{  products.cantidad }}</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>{{ products.total | currency: 'RD$' }}</td>
+      <td>{{ products.total | currency: "RD$" }}</td>
       <td></td>
       <td></td>
       <td></td>
@@ -86,8 +61,8 @@ tbody>tr>th{
   </tbody>
 </table>
 
-<!-- Table Finish
-<div class="col-md-4">
+
+<!-- <div class="col-md-4">
   <p>Total: {{products.total}}</p>
   <p>Cantidad: {{products.cantidad}}</p>
-</div> -->
+</div>  -->
