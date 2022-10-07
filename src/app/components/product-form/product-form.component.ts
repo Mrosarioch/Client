@@ -13,8 +13,9 @@ export class ProductFormComponent implements OnInit {
   product: Product = {
     name:"",
     apellido:"",
-    asegura: "",
     cedula: "",
+    asegura: "",
+    descripcion: "",
     poliza: "",
     autoriza: "",
     amount: 500,
