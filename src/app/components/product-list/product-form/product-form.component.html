@@ -34,7 +34,7 @@
           <input
             type="text"
             name="asegura"
-            [(ngModel)]="product.asegura"
+            [(ngModel)]="product.asegura.asegura"
             class="form-control"
             placeholder="Aseguradora"
           />
@@ -76,10 +76,8 @@
             placeholder="Monto"
           />
         </div>
-        <button [disabled]="!product.name||!product.apellido ||!product.cedula||!product.asegura|| !product.poliza||!product.autoriza||!product.descripcion || !product.amount " type="submit" class="btn btn-primary btn-block">Guardar</button>
+        <button type="submit" class="btn btn-primary btn-block">Guardar</button>
       </form>
     </div>
   </div>
 </div>
-
-<!-- "!product.name|| !product.apellido||!product.cedula||product.asegura|| !product.poliza||!product.autoriza||!product.descripcion || !product.amount" -->

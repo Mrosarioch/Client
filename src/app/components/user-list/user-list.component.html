@@ -1,0 +1,63 @@
+
+<style>
+  .table.table-hover {
+    box-shadow: 10px 10px 8px rgb(85, 113, 122);
+  }
+ 
+</style>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">usuario</th>
+      <th scope="col">Contraseña</th>
+      <th scope="col">Fecha</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users.users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email}}</td>
+      <td>{{ user.telefono}}</td>
+      <td>{{ user.username}}</td>
+      <td>{{ user.password}}</td>
+      <td>{{ user.createdAt | date: " d MMM , y, h:mm:ss a" }}</td>
+      <td>
+        <fa-icon
+        style="cursor: pointer; color: orange"
+          [routerLink]="['/user/edit', user._id]"
+          [icon]="faPen"
+        ></fa-icon>
+      </td>
+      <td>
+        <fa-icon
+          style="cursor: pointer; color: red"
+          (click)="deleteUser(user._id)"
+          [icon]="faTrash"
+        ></fa-icon>
+      </td>
+    </tr>
+    <tr>
+      <td>Cantidad: {{  users.cantidad }}</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{{ users.total | currency: "RD$" }}</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- <div class="col-md-4">
+  <p>Total: {{users.total}}</p>
+  <p>Cantidad: {{users.cantidad}}</p>
+</div>  -->
